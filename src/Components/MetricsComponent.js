@@ -38,7 +38,19 @@ const MetricsPage = () => {
   
 
   return (
-    <div className="bg-light min-vh-100 d-flex flex-column">
+    <div 
+    style={{
+      //backgroundImage:
+        //"url('https://cdn.images.express.co.uk/img/dynamic/11/590x/secondary/Brain-inflammation-4327236.jpg?r=1665132648724')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      background: "linear-gradient(to right, #4e54c8, #8f94fb)",
+      minHeight: "340vh",
+      display: "flex",
+      flexDirection: "column",
+    }}
+    >
       <HeaderComponent />
 
       <div className="container mt-5">

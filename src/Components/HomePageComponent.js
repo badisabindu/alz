@@ -23,7 +23,7 @@ const HomePage = () => {
       }}
     >
       <HeaderComponent />
-      <div className="container mt-5">
+      <div className="container-fluid mt-5">
         <div className="mb-5 p-4 bg-white shadow rounded">
           <h2 className="fw-bold" style={{ color: "#6a0dad" }}>About Alzheimer's</h2>
           <p className="text-muted">
@@ -33,10 +33,10 @@ const HomePage = () => {
             Detection of Alzheimer's often involves cognitive assessments, MRI scans, and advanced AI models analyzing brain patterns. Machine learning models can help in early-stage detection by analyzing structural changes in the brain.
           </p>
           <p className="text-muted">
-            Early detection is crucial for managing symptoms effectively. It helps in planning treatment and lifestyle modifications. Diagnostic methods include **clinical evaluations, cognitive tests, brain imaging (MRI, PET scans), and biomarker analysis** in cerebrospinal fluid. AI-powered models analyze MRI scans to identify structural abnormalities in the brain, aiding in early and accurate diagnosis.
+            Early detection is crucial for managing symptoms effectively. It helps in planning treatment and lifestyle modifications. Diagnostic methods include clinical evaluations, cognitive tests, brain imaging (MRI, PET scans), and biomarker analysis in cerebrospinal fluid. AI-powered models analyze MRI scans to identify structural abnormalities in the brain, aiding in early and accurate diagnosis.
           </p>
           <p className="text-muted">
-            Risk factors for Alzheimer's include genetic predisposition, lifestyle factors, cardiovascular conditions, and age. A **healthy diet, regular exercise, cognitive stimulation, and social engagement** can reduce the risk and slow disease progression.
+            Risk factors for Alzheimer's include genetic predisposition, lifestyle factors, cardiovascular conditions, and age. A healthy diet, regular exercise, cognitive stimulation, and social engagement can reduce the risk and slow disease progression.
           </p>
         </div>
 
@@ -78,9 +78,10 @@ const HomePage = () => {
           >
             Upload Image for Detection
           </button>
+          
         </div>
       </div>
-
+<br></br>
       <footer className="bg-white py-3 mt-auto text-center">
         <p className="mb-0 text-muted">&copy; 2025 Alzheimer's Detection. All Rights Reserved.</p>
       </footer>

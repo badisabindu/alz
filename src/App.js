@@ -9,6 +9,7 @@ import MetricsPage from './Components/MetricsComponent';
 import HomePage from './Components/HomePageComponent';
 import ProfilePage from './Components/ProfileComponent';
 import UploadPage from './Components/UploadComponent';
+import HistoryPage from './Components/HistoryComponent';
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,9 @@ function App() {
               <Route path="/metrics" element={<MetricsPage/>}/>
               <Route path="/profile"element={<ProfilePage/>}/>
               <Route path="/upload" element={<UploadPage/>}/>
+              <Route path="/history" element={<HistoryPage/>}/>
+              
+              
               {/* <Route path="/test" element={<TestingComponent />} /> */}
             </Routes>
           </main>

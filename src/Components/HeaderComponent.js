@@ -1,15 +1,26 @@
 
-import React from "react";
+import React,{useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS for dropdown functionality
 
 const HeaderComponent = () => {
+  //const[user,setUser]=useState(null)
   const navigate = useNavigate();
   const isAuthenticated = !!localStorage.getItem("token");
+  // useEffect(() => {
+  //     const storedUser = localStorage.getItem("user");
+  //     if (storedUser) {
+  //       const parsedUser = JSON.parse(storedUser);
+  //       setUser(parsedUser);      
+  //     } else {
+  //       navigate("/login");
+  //     }
+  //   }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     navigate("/login");
   };
 
@@ -53,8 +64,13 @@ const HeaderComponent = () => {
                   Menu
                 </button>
                 <ul className="dropdown-menu">
-                  <li>
+                <li>
                     <Link className="dropdown-item" to="/home">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/upload">
                       Predict
                     </Link>
                   </li>

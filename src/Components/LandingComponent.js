@@ -18,16 +18,14 @@ function LandingPage() {
       <HeaderComponent/>
 
       {/* Hero Section */}
-      <div className="container text-white text-center my-5">
+      <div className="container-fluid text-white text-center my-5">
         <div className="row align-items-center">
           <div className="col-md-6">
             <h1 className="fw-bold display-4">
               Early Detection of <br /> Alzheimer's Disease
             </h1>
             <p className="lead mt-3">
-              Leverage cutting-edge AI technology to detect Alzheimer's at its
-              early stages. Empowering individuals and healthcare providers to
-              make informed decisions for better outcomes.
+            Leverage advanced machine learning technology to detect Alzheimer's in its early stages, enabling individuals and healthcare providers to make data-driven decisions for improved outcomes.
             </p>
             <a
               href="#features"
@@ -55,7 +53,7 @@ function LandingPage() {
       </div>
 
       {/* Features Section */}
-      <div id="features" className="container my-5">
+      <div id="features" className="container-fluid my-5">
         <h2 className="text-center fw-bold mb-4" style={{ color: "#4e54c8" }}>
           Key Features
         </h2>
@@ -66,10 +64,10 @@ function LandingPage() {
                 className="bi bi-graph-up-arrow mb-3"
                 style={{ fontSize: "3rem", color: "#4e54c8" }}
               ></i>
-              <h5 className="fw-bold">AI-Powered Detection</h5>
+              <h5 className="fw-bold">ML-Powered Detection</h5>
               <p className="text-muted">
                 Analyze cognitive patterns to identify early signs of
-                Alzheimer's using advanced AI models.
+                Alzheimer's using ML models.
               </p>
             </div>
           </div>

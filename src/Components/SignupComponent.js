@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,6 +8,7 @@ function SignupPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [mobileNumber,setMobileNumber]=useState("")
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -17,6 +17,18 @@ function SignupPage() {
     e.preventDefault();
     setError("");
 
+    if (!email.endsWith("@gmail.com")) {
+      setError('Email must be a @gmail.com address');
+      return;
+  }
+
+  if (mobileNumber.length !== 10) {
+    setError("Mobile number should contain exactly 10 digits.");
+    return;
+  } else {
+    setError(""); 
+
+  }
     if (password !== confirmPassword) {
       setError("Passwords do not match!");
       return;
@@ -26,8 +38,9 @@ function SignupPage() {
       const response = await fetch("http://127.0.0.1:5000/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fullName, email, password }),
+        body: JSON.stringify({ fullName, email, password,mobileNumber }),
       });
+      console.log(mobileNumber)
 
       const data = await response.json();
 
@@ -66,6 +79,10 @@ function SignupPage() {
             <div className="mb-3">
               <label className="form-label fw-bold">Email Address</label>
               <input type="email" className="form-control" placeholder="Enter your email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
+            <div className="mb-3">
+              <label className="form-label fw-bold">Mobile Number</label>
+              <input type="text" className="form-control" placeholder="Enter your mobile number" required value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)} />
             </div>
             <div className="mb-3">
               <label className="form-label fw-bold">Password</label>

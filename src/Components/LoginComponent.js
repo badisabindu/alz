@@ -27,7 +27,7 @@ function LoginPage() {
       if (!response.ok) {
         throw new Error(data.error || "Login failed");
       }
-
+      localStorage.setItem("userId",data.user.id)
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
       
